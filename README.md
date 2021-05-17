@@ -1,3 +1,9 @@
+# Feedback Loop modified buildpack for lerna
+
+This runs `lerna bootstrap` instead of `npm install`.
+
+Set the LERNA_SCOPE env var to pass a scope to `bootstrap`.
+
 # Heroku Buildpack for Node.js
 
 ![nodejs](https://cloud.githubusercontent.com/assets/51578/13712672/efdf2a40-e792-11e5-82ef-492478cbc0dc.png)
