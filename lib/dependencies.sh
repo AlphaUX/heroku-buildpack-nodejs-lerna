@@ -69,9 +69,9 @@ run_build_if_present() {
       echo "Running $script_name"
       if [[ -n $NODE_BUILD_FLAGS ]]; then
         echo "Running with $NODE_BUILD_FLAGS flags"
-        monitor "${script_name}-script" npm run "$script_name" --if-present -- "$NODE_BUILD_FLAGS"
+        monitor "${script_name}-script" npx lerna run "$script_name" --scope "$LERNA_SCOPE" -- --if-present -- "$NODE_BUILD_FLAGS"
       else
-        monitor "${script_name}-script" npm run "$script_name" --if-present
+        monitor "${script_name}-script" npx lerna run "$script_name" --scope "$LERNA_SCOPE" -- --if-present
       fi
     fi
   fi
